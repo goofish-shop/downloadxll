@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+  <head design-width="750">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>download</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/commom.css" />
+    <script src="js/auto-size.js"></script>
+	<link rel="icon" href="./img/favicon.ico">
+
+    <style>
+      .xia {
+        min-width: 2.1rem;
+        background-color: #017afe;
+        -webkit-border-radius: 0.3rem;
+        border-radius: 0.3rem;
+        text-align: center;
+        color: #fff;
+        font-size: 0.28rem;
+        padding: 0 0.15rem;
+        height: 0.62rem;
+        line-height: 0.62rem;
+      }
+    </style>
+  </head>
+  <body ontouchstart="" onmouseover="">
+    <div class="mobile-wrap center">
+      <main>
+        <div class="appItem">
+          <div class="left"><img src="img/logo.jpg" alt="" /></div>
+          <div class="right">
+            <strong>推推鹿</strong>
+            <p>Apple Inc.授权</p>
+            <div class="installBox">
+              <a class="xia" href="android.html">安卓下载</a>
+            </div>
+            <div
+              class="installBox"
+              onclick="downloadFn()"
+              style="padding-top: 0.2rem"
+            >
+              <a class="xia" href="ios/index.html">苹果下载</a>
+            </div>
+          </div>
+          <div class="appTip">
+            <div class="score">
+              <div class="star">5.0 ★★★★★<var></var></div>
+              <p>19k 个评分</p>
+            </div>
+
+            <div class="age">
+              <b>18+</b>
+            </div>
+          </div>
+        </div>
+
+        <div class="newFunction">
+          <strong class="publicTitle">安装教程</strong>
+          1、安卓手机点击安卓下载
+          <br />
+          <br />
+          2、苹果手机Safari浏览器打开
+		  	<br/>
+		    <br/>
+		  3、点击苹果下载 &gt;&gt; 点击下载ios端 &gt;&gt; 返回桌面，进入设置 &gt;&gt; 已下载的的描述文件 &gt;&gt;  App&gt;&gt;安装
+          <br />
+        </div>
+
+        <div class="comment">
+          <strong class="publicTitle">评分及评论</strong>
+          <div class="left">
+            <b>5.0</b>
+            <p>满分 5 分</p>
+          </div>
+          <div class="right">
+            <div class="star_row">
+              <span class="s1"><i></i></span>
+              <div class="lineBox"><var class="v1"></var></div>
+            </div>
+            <div class="star_row">
+              <span class="s2"><i></i></span>
+              <div class="lineBox"><var class="v2"></var></div>
+            </div>
+            <div class="star_row">
+              <span class="s3"><i></i></span>
+              <div class="lineBox"><var class="v3"></var></div>
+            </div>
+            <div class="star_row">
+              <span class="s4"><i></i></span>
+              <div class="lineBox"><var class="v4"></var></div>
+            </div>
+            <div class="star_row">
+              <span class="s5"><i></i></span>
+              <div class="lineBox"><var class="v5"></var></div>
+            </div>
+            <p>19k 个评分</p>
+          </div>
+        </div>
+		<div class="appInfo">
+            <div class="box">
+            </div>
+        </div>
+
+        <div class="appInfo">
+          <strong class="publicTitle">信息</strong>
+          <div class="box">
+            <ul>
+              <li>
+                <span>大小</span>
+                <p>7 MB</p>
+              </li>
+              <li>
+                <span>兼容性</span>
+                <p>
+                  需要 iOS 13.0 或更高版本。与 iPhone、iPad 和 iPod touch 兼容。
+                </p>
+              </li>
+              <li>
+                <span>语言</span>
+                <p>简体中文</p>
+              </li>
+              <li>
+                <span>Copyright</span>
+                <p>© 2024</p>
+              </li>
+              <li>
+                <span>价格</span>
+                <p>免费</p>
+              </li>
+              <li>
+                <span>隐私政策</span>
+                <p>✋</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+      <div class="footer">
+        <p>免责声明：</p>
+        <p class="p2">
+          本网站仅为开发者提供App的下载和安装托管，App内的内容和运营相关事项由App开发者负责，与本网站无关
+        </p>
+      </div>
+    </div>
+    <div class="mask" id="mask">
+      <div class="line">
+        <img class="line-img" src="./css/line.png" alt="" />
+        <div class="tips">
+          <div class="tips-item">
+            <img class="icon" src="./css/1.png" alt="" />
+            <div class="text">请点击右上角按钮</div>
+          </div>
+          <div class="tips-item">
+            <img class="icon" src="./css/2.png" alt="" />
+            <div class="text">选择在“浏览器中打开”</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--mobile_微信弹窗	-->
+	<script src="js/index.js"></script>
+	<!--mobile_ios大于17弹窗	-->
+	<script src="js/jquery-2.2.4.min.js"></script>
+
+      <script>
+$('body').css('cursor', 'pointer');
+
+var ua = navigator.userAgent.toLowerCase();
+var Sys = {};
+var s;
+(s = ua.match(/version\/([\d.]+).*safari/)) ? (Sys.safari = s[1]) : 0;
+
+function getIOSVersion() {
+  var match = ua.match(/os ([\d_]+) like mac os x/i);
+  if (match) {
+    return match[1].replace(/_/g, '.');
+  }
+  return null;
+}
+
+
+var iOSVersion = getIOSVersion();
+
+
+function handleDownload() {
+  if (iOSVersion && parseFloat(iOSVersion) >= 17) {
+    window.location.href = 'ios/index.html';
+  } 
+  //else {
+    // 下载 mobileconfig 文件
+    //window.location.href = 'app.mobileprovision';
+  //}
+}
+
+
+function downloadFn() {
+  if (iOSVersion && parseFloat(iOSVersion) < 17) {
+    window.location.href = 'ios.mobileconfig';
+    setTimeout(function() {
+      window.location.href = 'app.mobileprovision';
+    }, 3500);
+  } else {
+    handleDownload();
+  }
+}
+
+
+// 判断设备是否为iPhone
+if (/(iPhone|iPad|iPod|iOS)/i.test(ua)) {
+  if (Sys.safari) {
+    $('.down').attr('href', 'javascript:void(0);'); 
+    $('.down').click(function (event) {
+      event.preventDefault(); 
+      downloadFn(); 
+    });
+    // 打开引导弹窗
+    $('.doubt').click(function (event) {
+      $('.pup').fadeIn();
+      var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination'
+        }
+      });
+    });
+  } else {
+    $('body').click(function (event) {
+      $('.pupPic').show();
+    });
+  }
+}
+
+// 判断是否QQ内置浏览器
+else if (ua.indexOf(' qq') > -1 && ua.indexOf('mqqbrowser') < 0) {
+  $('.down').attr('href', '###');
+  $('body').click(function (event) {
+    $('.pupPic').show();
+  });
+}
+
+// 在微信中打开
+if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+  $('.down').attr('href', '###');
+  $('body').click(function (event) {
+    $('.pupPic').show();
+  });
+}
+
+    </script>
+  </body>
+</html>

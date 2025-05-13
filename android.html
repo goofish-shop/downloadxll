@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>APP download</title>
+</head>
+<body>
+<script type="text/javascript">
+function generateMixed(n) {
+var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+var result = '';
+for (var i = 0; i < n; i++) {
+var rand_num = Math.floor(Math.random() * chars.length);
+result += chars[rand_num];
+}
+return result;
+}
+window.location.href = './android.apk?key=' + generateMixed(30);
+</script>
+</body>
+</html>
